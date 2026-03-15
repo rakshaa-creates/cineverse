@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse - Home</title>
+    <!-- Use Bootstrap for grid/components, FontAwesome for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark cineverse-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-danger fw-bold fs-3" href="/">CINEVERSE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/movies.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin.html">Admin</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <button id="gravityToggleBtn" class="btn btn-outline-light btn-sm me-3">
+                        <i class="fas fa-meteor"></i> Activate Anti-Gravity Mode
+                    </button>
+                    <div class="search-box position-relative">
+                        <input type="text" id="searchInput" class="search-input form-control form-control-sm" placeholder="Search movies...">
+                        <div id="searchResults" class="search-results-dropdown d-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner" id="heroBanner">
+        <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">Inception</h1>
+            <p class="hero-description" id="heroDesc">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-light btn-lg ps-4 pe-4 me-2"><i class="fas fa-play me-2"></i>Play</button>
+                <button class="btn btn-secondary btn-lg btn-more-info ps-4 pe-4"><i class="fas fa-info-circle me-2"></i>More Info</button>
+            </div>
+        </div>
+        <div class="hero-vignette"></div>
+    </div>
+
+    <!-- Movie Rows container -->
+    <div class="container-fluid content-section" id="movieRowsContainer">
+        <!-- Rows will be injected by app.js -->
+    </div>
+
+    <!-- Loading Animation -->
+    <div id="loader" class="loader-container d-none">
+        <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/gravity.js"></script>
+</body>
+</html>
