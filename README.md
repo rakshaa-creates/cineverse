@@ -1,44 +1,100 @@
-# CineVerse - Movies, Animations & VFX Collection
+# 🎬 CineVerse 
 
-CineVerse is a Netflix-inspired movie browsing platform built as a **Java full-stack case study project**. It features a modern, dark-themed UI, an H2 in-memory database, RESTful APIs, and a fun interactive "Anti-Gravity" easter egg.
+**CineVerse** is a modern, Netflix-inspired movie collection and browsing platform. Built as a full-stack Java case study project, it features a sleek dark-themed UI, an in-memory SQL database for zero-configuration testing, and a fully functional REST API architecture.
 
-## Features
+As a unique easter egg, CineVerse incorporates an interactive **Anti-Gravity Mode** powered by a 2D physics engine, allowing users to watch the UI elements detach and fall to the bottom of the screen!
 
-- **Netflix-Style UI**: Dark theme, hero banner, horizontal scrolling movie rows, hover animations.
-- **RESTful API**: Full CRUD capabilities using Spring Boot Data JPA.
-- **In-Memory Database**: Uses H2 database for zero-config setup, auto-populated with sample movies.
-- **Anti-Gravity Mode**: An interactive physics simulation (using `Matter.js`) that causes UI elements to drop, collide, and become draggable!
-- **Admin Panel**: A simple interface to Add, Edit, and Delete movies.
-- **Search & Filter**: Find movies by title or filter them by genre.
+---
 
-## Tech Stack
+## 📽️ Features
 
-- **Backend**: Java 17, Spring Boot (Web, Data JPA), H2 Database, Lombok.
-- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5, jQuery.
-- **Physics Engine**: Matter.js (A modern alternative to Gravity.js).
+- **Netflix-Style UI**: A premium dark theme, large hero banners, horizontal scrolling movie rows, and smooth hover micro-animations.
+- **RESTful API Architecture**: Complete backend API to `GET`, `POST`, `PUT`, and `DELETE` movies.
+- **Dynamic Content Filtering**: Seamlessly filter movies by category or genre without refreshing the page.
+- **Admin Panel**: A centralized dashboard to add new titles, edit existing movie details, and manage the catalog.
+- **Bonus Interaction (Anti-Gravity)**: Toggle the gravity mode to turn the DOM elements into rigid physics bodies. Watch them fall, bounce, and drag them around using `Matter.js`.
+- **Zero Configuration DB**: Utilizes Spring Boot with an H2 in-memory database that auto-populates on application startup.
 
-## How to Run Locally
+---
+
+## 📸 Screenshots
+
+*(Add your screenshots here!)*
+
+* ### Home Page (Hero Banner & Categories)
+  ![Home Page Screenshot](#) <!-- Replace # with actual image path/URL -->
+
+* ### Movies Grid & Filtering
+  ![Movies Grid Screenshot](#) <!-- Replace # with actual image path/URL -->
+
+* ### Movie Details (With Trailer)
+  ![Movie Details Screenshot](#) <!-- Replace # with actual image path/URL -->
+
+* ### Admin Panel
+  ![Admin Panel Screenshot](#) <!-- Replace # with actual image path/URL -->
+
+---
+
+## 💻 Tech Stack
+
+### Backend
+- **Java 17**
+- **Spring Boot 3.x**
+  - Spring Web (REST APIs)
+  - Spring Data JPA (Hibernate)
+- **H2 Database** (In-memory structured data storage)
+
+### Frontend
+- **HTML5 & CSS3** (Custom Netflix-style design system)
+- **Bootstrap 5** (Responsive grid grid layout and modals)
+- **JavaScript (Vanilla + jQuery)** (DOM manipulation and AJAX API requests)
+- **Matter.js** (2D Web Physics Engine for Anti-Gravity mode)
+
+---
+
+## 🚀 How to Run Locally
 
 ### Prerequisites
-- JDK 17+
-- Maven
+Make sure you have installed on your system:
+- **Java JDK 17** or higher
+- **Maven** (`mvn`)
 
-### Steps
-1. Navigate to the project root directory where `pom.xml` is located.
-2. Run the application using Maven:
+### Installation & Execution Steps
+
+1. **Clone the repository** (or navigate to the project directory):
+   ```bash
+   cd cineverse
+   ```
+
+2. **Run the Spring Boot Application** using Maven:
    ```bash
    mvn spring-boot:run
    ```
-3. The server will start on port 8080.
-4. Open your web browser and go to:
-   [http://localhost:8080](http://localhost:8080)
-5. To view the H2 Database console, go to:
-   [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
-   - **JDBC URL**: `jdbc:h2:mem:cineversedb`
-   - **Username**: `sa`
-   - **Password**: *(leave blank)*
+   *(Note: The first run might take a minute as Maven downloads the required Spring Boot dependencies).*
 
-## Case Study Highlights
-- **Clean Architecture**: Follows `Controller` -> `Service` -> `Repository` pattern.
-- **Modular Frontend**: Separate HTML pages with centralized CSS and JS logic.
-- **Bonus Interaction**: The Anti-Gravity feature maps DOM elements to rigid physics bodies demonstrating advanced DOM manipulation combined with Canvas-based 2D physics rendering.
+3. **Open the Application**:
+   Once the server starts, open your web browser and navigate to:
+   ```
+   http://localhost:8080
+   ```
+
+4. **Explore the H2 Database Console (Optional)**:
+   You can view and query the in-memory database directly:
+   - URL: `http://localhost:8080/h2-console`
+   - JDBC URL: `jdbc:h2:mem:cineversedb`
+   - Username: `sa`
+   - Password: *(leave blank)*
+
+---
+
+## 🏗️ Project Architecture
+
+CineVerse follows the standard N-Tier architecture pattern:
+- **Controllers** (`MovieController`): Manages HTTP requests and routes them to the service layer.
+- **Services** (`MovieService`): Contains the business logic.
+- **Repositories** (`MovieRepository`): Interfaces with the Spring Data JPA layer for database persistence.
+- **Models** (`Movie`): Defines the Java Entity schema spanning properties like title, rating, poster URLs, and cast members.
+
+---
+
+*Built with ❤️ as a Full-Stack Java Case Study.*
