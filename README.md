@@ -19,19 +19,14 @@ As a unique easter egg, CineVerse incorporates an interactive **Anti-Gravity Mod
 
 ## 📸 Screenshots
 
-*(Add your screenshots here!)*
-
 * ### Home Page (Hero Banner & Categories)
-  ![Home Page Screenshot](#) <!-- Replace # with actual image path/URL -->
+  ![Home Page Screenshot](Screenshot%202026-03-15%20184430.png)
 
 * ### Movies Grid & Filtering
-  ![Movies Grid Screenshot](#) <!-- Replace # with actual image path/URL -->
+  ![Movies Grid Screenshot](Screenshot%202026-03-15%20184453.png)
 
 * ### Movie Details (With Trailer)
-  ![Movie Details Screenshot](#) <!-- Replace # with actual image path/URL -->
-
-* ### Admin Panel
-  ![Admin Panel Screenshot](#) <!-- Replace # with actual image path/URL -->
+  ![Movie Details Screenshot](Screenshot%202026-03-15%20184530.png)
 
 ---
 
